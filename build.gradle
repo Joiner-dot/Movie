@@ -1,0 +1,107 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+}
+
+android {
+    compileSdkVersion 30
+    buildToolsVersion "30.0.3"
+
+    defaultConfig {
+        applicationId "com.example.movierate"
+        minSdkVersion 21
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    def koin_version = '3.0.1' //current version
+    def lifecycle_version = "2.3.1"
+    def support_appcompat_version = "30.0.0"
+    def constraint_version = "2.0.4"
+    def navigation_version = "2.3.5"
+    def legacy_version = "1.0.0"
+    def room_version = "2.3.0"
+    def appcompat_version = "1.3.0"
+    def junit_version = "4.13.2"
+    def retrofit_version = "2.9.0"
+    def okhttp_version = "4.9.1"
+    def coroutines_version = "1.5.0"
+    def gson_converter_version = "2.6.1"
+    def image_loader_version = "2.71828"
+    def android_rxjava_version = "2.1.1"
+    def rxjava_version = "2.2.10"
+    def retrofit_adapter_version = "1.0.0"
+    def support_test_runner_version = "1.0.2"
+    def espresso_test_version = "3.0.2"
+    def test_ext_version = "1.1.2"
+    def espresso_core_version = "3.3.0"
+    def androidx_test_version = "1.4.0"
+    def mockito_version = "3.11.2"
+    def adapter_delegate_version = "4.3.0"
+    def binding_delegate_version = "1.0.1"
+    implementation(platform("com.squareup.okhttp3:okhttp-bom:$okhttp_version"))
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$rootProject.ext.kotlin_version"
+    implementation "com.android.support:appcompat-v7:$support_appcompat_version"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_version"
+    implementation "androidx.navigation:navigation-fragment-ktx:$navigation_version"
+    implementation "androidx.navigation:navigation-ui-ktx:$navigation_version"
+    implementation "androidx.legacy:legacy-support-v4:$legacy_version"
+    implementation "androidx.appcompat:appcompat:$appcompat_version"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_version"
+    implementation "com.squareup.retrofit2:retrofit:$retrofit_version"
+    implementation("com.squareup.okhttp3:logging-interceptor")
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutines_version"
+    implementation "com.squareup.retrofit2:converter-gson:$gson_converter_version"
+    implementation "io.reactivex.rxjava2:rxandroid:$android_rxjava_version"
+    implementation "io.reactivex.rxjava2:rxjava:$rxjava_version"
+    implementation "com.jakewharton.retrofit:retrofit2-rxjava2-adapter:$retrofit_adapter_version"
+    implementation "io.insert-koin:koin-android:$koin_version"
+    implementation "io.insert-koin:koin-android-ext:$koin_version"
+    implementation "io.insert-koin:koin-androidx-workmanager:$koin_version"
+    implementation "io.insert-koin:koin-androidx-compose:$koin_version"
+    implementation "com.squareup.picasso:picasso:$image_loader_version"
+    implementation 'com.hannesdorfmann:adapterdelegates4:4.3.0'
+    implementation 'com.hannesdorfmann:adapterdelegates4:4.3.1-SNAPSHOT'
+    implementation 'com.hannesdorfmann:adapterdelegates4-kotlin-dsl:4.3.0'
+    implementation "androidx.room:room-ktx:$room_version"
+    implementation "androidx.room:room-runtime:$room_version"
+    implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-layoutcontainer:$adapter_delegate_version"
+    implementation "com.hannesdorfmann:adapterdelegates4-kotlin-dsl-viewbinding:$adapter_delegate_version"
+    implementation "com.github.yogacp:android-viewbinding:$binding_delegate_version"
+    implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    testImplementation "junit:junit:$junit_version"
+    testImplementation "androidx.room:room-testing:$room_version"
+    testImplementation "org.mockito:mockito-core:$mockito_version"
+    androidTestImplementation "androidx.test.ext:junit:$test_ext_version"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_core_version"
+    androidTestImplementation "com.android.support.test:runner:$support_test_runner_version"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espresso_test_version"
+    androidTestImplementation "androidx.test:runner:$androidx_test_version"
+    androidTestImplementation "androidx.test:rules:$androidx_test_version"
+    kapt "androidx.room:room-compiler:$room_version"
+}
