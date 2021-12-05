@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">MovieRate</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="runtime">Runtime:</string>
+    <string name="awards">Awards:</string>
+    <string name="language">Language:</string>
+    <string name="plot">Plot:</string>
+    <string name="country">Country:</string>
+    <string name="genre">Genre:</string>
+    <string name="actors">Actors:</string>
+    <string name="writer">Writer:</string>
+    <string name="director">Director:</string>
+    <string name="fees">Fees:</string>
+    <string name="rated">Rated:</string>
+    <string name="n_a">N/A</string>
+    <string name="date_of_release">Date Of Release</string>
+    <string name="rotten_tomatoes">Rotten Tomatoes</string>
+    <string name="imdb">IMDB</string>
+    <string name="todo">TODO</string>
+    <string name="boxoffice">BoxOffice</string>
+    <string name="textview">TextView</string>
+    <string name="popular">Popular</string>
+    <string name="box_office">Box Office</string>
+    <string name="see_now">Random</string>
+    <string name="search">Search</string>
+</resources>

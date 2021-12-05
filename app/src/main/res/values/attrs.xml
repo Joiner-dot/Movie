@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <attr name="bottomNav" format="color|reference" />
+    <attr name="black" format="reference" />
+    <attr name="background_about_movie" format="reference" />
+    <attr name="progressBackground" format="reference"/>
+</resources>

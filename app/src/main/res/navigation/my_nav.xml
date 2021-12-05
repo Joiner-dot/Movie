@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@+id/popular">
+
+    <fragment
+        android:id="@+id/popular"
+        android:name="com.example.movierate.ui.fragments.PopularMoviesFragment"
+        android:label="popular_movies"
+        tools:layout="@layout/popular_movies" >
+        <action
+            android:id="@+id/action_popular_to_boxOfficePage"
+            app:destination="@id/boxOfficePage" />
+        <action
+            android:id="@+id/action_popular_to_moviesNowFragmet"
+            app:destination="@id/moviesNowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/boxOfficePage"
+        android:name="com.example.movierate.ui.fragments.PageAboutBoxOffice"
+        android:label="box_office_page"
+        tools:layout="@layout/box_office_page" >
+        <action
+            android:id="@+id/action_boxOfficePage_to_popular"
+            app:destination="@id/popular" />
+        <action
+            android:id="@+id/action_boxOfficePage_to_moviesNowFragmet"
+            app:destination="@id/moviesNowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/moviesNowFragment"
+        android:name="com.example.movierate.ui.fragments.MoviesNowFragment"
+        android:label="movies_now_fragment"
+        tools:layout="@layout/movies_now_fragmet" >
+        <action
+            android:id="@+id/action_moviesNowFragmet_to_popular"
+            app:destination="@id/popular" />
+        <action
+            android:id="@+id/action_moviesNowFragmet_to_boxOfficePage"
+            app:destination="@id/boxOfficePage" />
+    </fragment>
+</navigation>
